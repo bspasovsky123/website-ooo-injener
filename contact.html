@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - ООО "Инженер"</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Добавление иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image2.jpg');  /* Вставляем изображение фоном */
+            background-size: cover;  /* Растягиваем фон по всему экрану */
+            background-position: center center;  /* Центрируем фон */
+            background-attachment: fixed;  /* Закрепляем фон, чтобы он не прокручивался */
+            height: 100vh;  /* Устанавливаем высоту для полного охвата экрана */
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6);  /* Полупрозрачный фон для навигационной панели */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar .container a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .container a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        /* Контейнер для информации */
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.9);  /* Белый фон с прозрачностью */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+        }
+
+        .contact-details h4 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .contact-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-details li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .contact-details li a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .contact-details li a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-hours {
+            margin-top: 20px;
+        }
+
+        .contact-hours ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-hours li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Иконки */
+        .contact-details i {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-link">Главная</a> 
+            <a href="contact.html" class="nav-link">Контакты</a> 
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-info" id="contact">
+            <div class="container">
+                <h3>Контакты</h3>
+                <p>Мы всегда рады помочь вам и ответить на ваши вопросы. Свяжитесь с нами любым удобным способом:</p>
+                
+                <div class="contact-details">
+                    <h4>Наши контактные данные:</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i><strong>Электронная почта:</strong> <a href="mailto:r-v-s@list.ru">r-v-s@list.ru</a></li>
+                        <li><i class="fas fa-phone-alt"></i><strong>Номер телефона:</strong> <a href="tel:79672094016">+7 967 209-40-16</a></li>
+                        <li><i class="fab fa-whatsapp"></i><strong>WhatsApp:</strong> <a href="https://wa.me/79672094016">Написать в WhatsApp</a></li>
+                        <li><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</li> 
+                    </ul>
+                </div>
+
+                <div class="contact-hours">
+                    <h4>Время работы:</h4>
+                    <ul>
+                        <li><strong>Понедельник - Пятница:</strong> 09:00 - 18:00</li>
+                        <li><strong>Суббота:</strong> 10:00 - 15:00</li>
+                        <li><strong>Воскресенье:</strong> Выходной</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Черная полоска с текстом "ООО Инженер" -->
+    <footer>
+        <p>&copy; 2025 ООО "Инженер". Все права защищены.</p>
+    </footer>
+</body>
+</html>
