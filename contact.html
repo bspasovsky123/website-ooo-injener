@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - ООО "Инженер"</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Добавление иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Контакты - ООО "Инженер"</title>
+<link href="style.css" rel="stylesheet"/>
+<!-- Добавление иконок -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<style>
         /* Общие стили */
         body {
             font-family: Arial, sans-serif;
@@ -121,47 +122,89 @@
             margin: 0;
         }
     </style>
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+    });
+    </script>
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    function toggleDeviceMode() {
+        const body = document.body;
+        if (body.classList.contains("mobile-mode")) {
+            body.classList.remove("mobile-mode");
+            body.classList.add("desktop-mode");
+            localStorage.setItem("view", "desktop");
+        } else {
+            body.classList.add("mobile-mode");
+            body.classList.remove("desktop-mode");
+            localStorage.setItem("view", "mobile");
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+        if (localStorage.getItem("view") === "mobile") {
+            document.body.classList.add("mobile-mode");
+        } else if (localStorage.getItem("view") === "desktop") {
+            document.body.classList.add("desktop-mode");
+        }
+    });
+    </script>
 </head>
 <body>
-    <!-- Навигационная панель -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="nav-link">Главная</a> 
-            <a href="contact.html" class="nav-link">Контакты</a> 
-        </div>
-    </nav>
+<button onclick="toggleDeviceMode()" style="position: fixed; top: 50px; right: 10px; z-index: 1001;">📱 Режим</button>
+<button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; z-index: 1001;">🌓 Тема</button>
+<!-- Навигационная панель -->
+<nav class="navbar">
+<div class="container">
 
-    <main>
-        <section class="contact-info" id="contact">
-            <div class="container">
-                <h3>Контакты</h3>
-                <p>Мы всегда рады помочь вам и ответить на ваши вопросы. Свяжитесь с нами любым удобным способом:</p>
-                
-                <div class="contact-details">
-                    <h4>Наши контактные данные:</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i><strong>Электронная почта:</strong> <a href="mailto:r-v-s@list.ru">r-v-s@list.ru</a></li>
-                        <li><i class="fas fa-phone-alt"></i><strong>Номер телефона:</strong> <a href="tel:79672094016">+7 967 209-40-16</a></li>
-                        <li><i class="fab fa-whatsapp"></i><strong>WhatsApp:</strong> <a href="https://wa.me/79672094016">Написать в WhatsApp</a></li>
-                        <li><strong>Адрес:</strong> 125363, г. Москва, вн.тер.г. муниципальный округ Южное Тушино, ул. Сходненская, д. 25, помещ. 7/1.</li> 
-                    </ul>
-                </div>
 
-                <div class="contact-hours">
-                    <h4>Время работы:</h4>
-                    <ul>
-                        <li><strong>Понедельник - Пятница:</strong> 09:00 - 18:00</li>
-                        <li><strong>Суббота:</strong> 10:00 - 15:00</li>
-                        <li><strong>Воскресенье:</strong> Выходной</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Черная полоска с текстом "ООО Инженер" -->
-    <footer>
-        <p>&copy; 2025 ООО "Инженер". Все права защищены.</p>
-    </footer>
+<a class="nav-link" href="index.html">Главная</a><a class="nav-link" href="uslugi.html">Услуги</a><a class="nav-link" href="contact.html">Контакты</a></div>
+</nav>
+<main>
+<section class="contact-info" id="contact">
+<div class="container">
+<h3>Контакты</h3>
+<p>Мы всегда рады помочь вам и ответить на ваши вопросы. Свяжитесь с нами любым удобным способом:</p>
+<div class="contact-details">
+<h4>Наши контактные данные:</h4>
+<ul>
+<li><i class="fas fa-envelope"></i><strong>Электронная почта:</strong> <a href="mailto:r-v-s@list.ru">r-v-s@list.ru</a></li>
+<li><i class="fas fa-phone-alt"></i><strong>Номер телефона:</strong> <a href="tel:79672094016">+7 967 209-40-16</a></li>
+<li><i class="fab fa-whatsapp"></i><strong>WhatsApp:</strong> <a href="https://wa.me/79672094016">Написать в WhatsApp</a></li>
+<li><strong>Адрес:</strong> 125363, г. Москва, вн.тер.г. муниципальный округ Южное Тушино, ул. Сходненская, д. 25, помещ. 7/1.</li>
+</ul>
+</div>
+<div class="contact-hours">
+<h4>Время работы:</h4>
+<ul>
+<li><strong>Понедельник - Пятница:</strong> 09:00 - 18:00</li>
+<li><strong>Суббота:</strong> 10:00 - 15:00</li>
+<li><strong>Воскресенье:</strong> Выходной</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Черная полоска с текстом "ООО Инженер" -->
+<footer>
+<p>© 2025 ООО "Инженер". Все права защищены.</p>
+</footer>
 </body>
 </html>
