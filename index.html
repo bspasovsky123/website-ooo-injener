@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ООО "Инженер" - Техническое обслуживание</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ООО "Инженер" - Техническое обслуживание</title>
+<link href="style.css" rel="stylesheet"/>
+<style>
         
         body {
             font-family: Arial, sans-serif;
@@ -96,41 +97,81 @@
             margin: 0;
         }
     </style>
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+    });
+    </script>
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    function toggleDeviceMode() {
+        const body = document.body;
+        if (body.classList.contains("mobile-mode")) {
+            body.classList.remove("mobile-mode");
+            body.classList.add("desktop-mode");
+            localStorage.setItem("view", "desktop");
+        } else {
+            body.classList.add("mobile-mode");
+            body.classList.remove("desktop-mode");
+            localStorage.setItem("view", "mobile");
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+        if (localStorage.getItem("view") === "mobile") {
+            document.body.classList.add("mobile-mode");
+        } else if (localStorage.getItem("view") === "desktop") {
+            document.body.classList.add("desktop-mode");
+        }
+    });
+    </script>
 </head>
 <body>
-    <!-- Навигационная панель -->
-    <nav class="navbar">
-        <div class="container">
-            
-            <a href="index.html" class="nav-link">Главная</a> 
-           
-            <a href="contact.html" class="nav-link">Контакты</a> 
-        </div>
-    </nav>
+<button onclick="toggleDeviceMode()" style="position: fixed; top: 50px; right: 10px; z-index: 1001;">📱 Режим</button>
+<button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; z-index: 1001;">🌓 Тема</button>
+<!-- Навигационная панель -->
+<nav class="navbar">
+<div class="container">
 
-    <!-- Главная секция -->
-    <header id="home">
-        <div class="container">
-            <h1>ООО "Инженер"</h1>
-            <p>Техническое обслуживание инженерного оборудования и ремонт жилых зданий</p>
-        </div>
-    </header>
 
-    <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Мы обеспечиваем надежность и долговечность ваших объектов</h2>
-                <p>Наши специалисты обеспечивают техническое обслуживание и капитальный ремонт с гарантией качества. Мы работаем с каждым клиентом индивидуально, предлагая высококачественные решения для вашего бизнеса.</p>
-                
-                <a href="contact.html" class="cta-button">Связаться с нами</a> 
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 ООО "Инженер". Все права защищены.</p>
-        </div>
-    </footer>
+<a class="nav-link" href="index.html">Главная</a><a class="nav-link" href="uslugi.html">Услуги</a><a class="nav-link" href="contact.html">Контакты</a></div>
+</nav>
+<!-- Главная секция -->
+<header id="home">
+<div class="container">
+<h1>ООО "Инженер"</h1>
+<p>Техническое обслуживание инженерного оборудования и ремонт жилых зданий</p>
+</div>
+</header>
+<main>
+<section class="intro">
+<div class="container">
+<h2>Мы обеспечиваем надежность и долговечность ваших объектов</h2>
+<p>Наши специалисты обеспечивают техническое обслуживание и капитальный ремонт с гарантией качества. Мы работаем с каждым клиентом индивидуально, предлагая высококачественные решения для вашего бизнеса.</p>
+<a class="cta-button" href="contact.html">Связаться с нами</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<p>© 2025 ООО "Инженер". Все права защищены.</p>
+</div>
+</footer>
 </body>
 </html>
