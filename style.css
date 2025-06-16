@@ -11,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Контейнер для выравнивания элементов */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -25,6 +26,15 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link {
@@ -41,6 +51,7 @@ body {
     color: #007BFF;
 }
 
+/* Активная ссылка */
 .nav-link.active {
     color: #007BFF;
 }
@@ -178,6 +189,7 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 /* Анимации */
@@ -200,3 +212,41 @@ footer {
         opacity: 1;
     }
 }
+
+/* Адаптивность под планшеты и телефоны */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 18px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .contact-info,
+  .contact-form form {
+    padding: 10px;
+  }
+}    
