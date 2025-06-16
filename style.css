@@ -250,3 +250,33 @@ footer {
     padding: 10px;
   }
 }    
+
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode a {
+    color: #80cbc4 !important;
+}
+
+.dark-mode .navbar, .dark-mode footer {
+    background-color: #1f1f1f !important;
+}
+
+.dark-mode .intro, .dark-mode .contact-form, .dark-mode .contact-info, .dark-mode .service-introduction {
+    background-color: #1e1e1e !important;
+    color: #ccc !important;
+}
+
+
+
+/* Переключение между режимами */
+.mobile-mode {
+    zoom: 0.5;
+}
+
+.desktop-mode {
+    zoom: 1;
+}
